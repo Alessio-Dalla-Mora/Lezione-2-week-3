@@ -99,7 +99,8 @@
     */
 
       const addClassToTitle = function () {
-        let newClass = (document.setAttribute = ("class", "myHeading"));
+        let h1 = document.querySelector("h1");
+        h1.classList.add("myHeading");
       };
       addClassToTitle();
 
@@ -108,8 +109,10 @@
       */
 
       const changePcontent = function () {
-        let P = document.querySelector("div p");
-        console.log(changePcontent);
+        let allP = document.querySelectorAll("div p");
+        allP.forEach((p) => {
+          p.innerText = "CIAONE";
+        });
       };
       changePcontent();
 
